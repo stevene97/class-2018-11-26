@@ -1,0 +1,28 @@
+---
+title: "class-11-26"
+author: "Steven Espinoza"
+date: "11/26/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(gganimate)
+library(readxl)
+library(janitor)
+library(tidyverse)
+```
+
+## Step 1:
+```{r}
+# Reading in the files
+data.1 <- read_excel('Nov18CVRExportRaw-1.xlsx')
+data.2 <- read_excel('Nov18CVRExportRaw-2.xlsx')
+data.3 <- read_excel('Nov18CVRExportRaw-3.xlsx')
+
+# Bind rows
+x <- bind_rows(data.1, data.2, data.3)
+
+```
+
+
